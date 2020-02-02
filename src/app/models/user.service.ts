@@ -102,7 +102,7 @@ export class UserService {
    * Coloca la musica de fondo del lector de comic actual con el identificador que entra por parámetro
    * @param bg Identificador del archivo de sonido
    */
-  setComicBg(bg: string) {
+  setComicBg(bg) {
     this.currentComicBg = bg;
   }
 

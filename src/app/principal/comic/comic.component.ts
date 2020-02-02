@@ -24,20 +24,28 @@ export class ComicComponent {
   lastComic = "0";                // Atributo que identifica la ultima pagina de la secuencia
   onLast = false;                 // Determina si el lector se encuetra en la última página o no
   onFirst = true;                 // Determina si el lector se encuetra en la primera página o no
-  currentBg = "";                 // Atributo que identifica la musica de fondo que suena durante la secuencia
-  bgSound = null;                 // Atributo que controla la musica de fondo
+  currentBg = [];                 // Atributo que identifica la lista de musica de fondo que suena durante la secuencia
+  currentPos = 0;                 // Posicion del track actual en la secuencia
+
+  // Lista de fondos para los diferentes capítulos
+  chapter1BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
+                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
+
+  chapter2BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
+                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
+
+  chapter3BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
+                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
 
   //----------------------------------------------------------------------------------------------------------
   // Constructor
   //----------------------------------------------------------------------------------------------------------
 
-  constructor(private userService: UserService, private router: Router, private app: AppComponent, music: MusicService){
+  constructor(private userService: UserService, private router: Router, private app: AppComponent, private music: MusicService){
     this.initComic = this.userService.getInitComic();
     this.lastComic = this.userService.getLastComic();
     this.currentComic = this.initComic;
-    var currentBg = this.userService.getComicBg();
-    music.setBg('/comic/' + currentBg);
-    app.notifyBgChange();
+    this.setBackground(this.userService.getComicBg())
   }
 
   //----------------------------------------------------------------------------------------------------------
@@ -45,15 +53,42 @@ export class ComicComponent {
   //----------------------------------------------------------------------------------------------------------
 
   /**
+   * Asigna la lista correcta de musica de fondo dependiendo del comic que se está cargando
+   * @param bg Numero del capitulo que se está cargando
+   */
+  setBackground(bg){
+    if(bg == 1)
+      this.currentBg = this.chapter1BG
+    else if(bg == 2)
+      this.currentBg = this.chapter2BG
+    else if(bg == 3)
+      this.currentBg = this.chapter3BG
+
+    this.music.setBg('comic/' + this.currentBg[0]);
+    this.app.notifyBgChange();
+  }
+
+  changeBackground(dir){
+    console.log("pos: " + this.currentPos + " dir: " + dir);
+    if(this.currentBg[this.currentPos] != this.currentBg[this.currentPos + dir]){
+      console.log("cambio");
+      this.music.setBg('comic/' + this.currentBg[this.currentPos + dir]);
+      this.app.notifyBgChange();
+    }
+  }
+
+  /**
    * Cambia la pagina actual a la siguiente en la secuencia y mueve la vista al ancla que entra por parametro
    * @param $element Ancla en el DOM hacia donde se mueve la ventana
    */
   onSig($element) {
+    this.changeBackground(1)
     var current = Number(this.currentComic);
     var last = Number(this.lastComic);
     current++;
     if(current <= last) {
       this.currentComic = current + "";
+      this.currentPos = this.currentPos + 1;
     }
 
     if(current == last)
@@ -70,12 +105,14 @@ export class ComicComponent {
    * Cambia la pagina actual a la anterior en la secuencia
    */
   onPrev() {
+    this.changeBackground(-1)
     var current = Number(this.currentComic);
     var first = Number(this.initComic);
     this.onLast = false;
     current--;
     if(current >= first) {
       this.currentComic = current + "";
+      this.currentPos = this.currentPos - 1;
     }
 
     if(current == first) {
