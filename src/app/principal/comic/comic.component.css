@@ -1,0 +1,12 @@
+.comic-container { margin-left: 10%; background-color: transparent }
+.comic-container img { height: auto; width: 90% }
+
+.comic-prev { background-color: transparent; margin-left: 40% }
+.comic-prev:hover{ filter: grayscale(100%); -webkit-filter: grayscale(100%) }
+
+.comic-sig { background-color: transparent; margin-left: 12% }
+.comic-sig:hover{ filter: grayscale(100%); -webkit-filter: grayscale(100%) }
+
+.comic-continuar { font-size: 16px; color: white; border: 2px solid white; background-color: transparent; display: block; width: 30%; margin-left: 35% }
+.comic-continuar:hover{ color: cyan; border-color: cyan }
+.comic-continuar:active{ color: black; border-color: black }

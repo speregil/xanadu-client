@@ -1,0 +1,4 @@
+<label class="logros-title">LOGROS</label><label class="logros-puntos">Puntos totales: {{calcularPuntos()}}</label>
+<div class="logros-container">
+    <div *ngFor="let achivement of achivements" class="logro"><img src="assets/static/iconos/normal/logro.png"><label>{{achivement.text}}</label><label>{{achivement.points}}</label></div>
+</div>

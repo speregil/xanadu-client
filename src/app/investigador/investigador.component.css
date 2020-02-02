@@ -1,0 +1,20 @@
+.cuestionario-container { background-image: url("../../assets/static/laboratorio/fondo-taller.jpg"); border: 1px solid black; height: 100vh;}
+
+.normal { border: 0; margin-top: 5vh }
+.normal label { font-size: xx-large; margin-left: 2%; margin-right: 2% }
+.normal select { width: 20%; padding-left: 10px; background-color: rgba(3, 82, 89, 0.4); color: white; font-size: xx-large; border: 0  }
+
+.correct { border: solid 3px green; margin-top: 5vh; padding: 1px 1px 1px 1px  }
+.correct label { font-size: xx-large; margin-left: 2%; margin-right: 2% }
+.correct select { width: 20%; padding-left: 10px; background-color: rgba(3, 82, 89, 0.4); color: white; font-size: xx-large; border: 0  }
+
+.incorrect { border: solid 3px red; margin-top: 5vh; padding: 1px 1px 1px 1px  }
+.incorrect label { font-size: xx-large; margin-left: 2%; margin-right: 2% }
+.incorrect select { width: 20%; padding-left: 10px; background-color: rgba(3, 82, 89, 0.4); color: white; font-size: xx-large; border: 0  }
+
+p { font-size: xx-large; text-align: center }
+
+.cuestionario { margin-left: 5% }
+
+.reportero-container { margin-left: 35% }
+.reportero-button { width: 15%; margin-right: 5%; font-size: x-large }

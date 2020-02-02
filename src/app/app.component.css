@@ -1,0 +1,28 @@
+.header {width: 100%; height: 6vh; padding: 3px; display: grid; grid-template-columns: 5% 20% auto; background-image: url("../assets/static/barra_superior.png"); position: -webkit-sticky; position: sticky; top: 0; z-index: 3 }
+
+.home { width: 60%; margin-left: 2%; cursor: pointer }
+.home:hover { filter: grayscale(100%); -webkit-filter: grayscale(100%); cursor: pointer }
+
+.header-nav { display: grid; grid-template-columns: auto auto auto }
+.header-nav a { margin-top: 2vh }
+.header-nav a:link { font-size: x-large; font-style: bold; color:#d5e0d9; text-decoration: none }
+.header-nav a:visited { font-size: x-large; font-style: bold; color:#d5e0d9; text-decoration: none }
+.header-nav a:hover { color: #cccccc }
+
+.header-login { display: grid; grid-template-columns: auto auto 10%; margin-left: 100px }
+.header-go { width: 30%; margin: auto; cursor: pointer }
+.header-go:hover { filter: grayscale(100%); -webkit-filter: grayscale(100%) } 
+.header-form {  width: 95%; margin: 5px; padding-left: 10px; background-color: rgba(41, 171, 226, 0.15); color: white; font-size: x-large; border: 0 }
+.header-form::placeholder { color: white; opacity: 0.8; font-size: x-large }
+
+.header-data{ display: grid; grid-template-columns: 60% auto; margin-left: 4%; margin-top: 1vh }
+.header-name { width: 100%; display: grid; grid-template-columns: 33% 33% 33%; padding-left: 10%; padding-top: 1vh }
+.header-info { color: white; font-size: x-large }
+.header-options { width: 100%; display: grid; grid-template-columns: auto auto auto auto; margin-left: 5% }
+.header-option { width: 20% }
+.header-option img { width: 100% }
+.header-option img:hover { width: 100%; filter: grayscale(100%); -webkit-filter: grayscale(100%);}
+.header-close { width: 20%; cursor: pointer; margin-left: 5% }
+.header-close:hover { filter: grayscale(100%); -webkit-filter: grayscale(100%) }
+.header-sound { width: 20%; cursor: pointer; margin-left: 5% }
+.header-sound:hover { filter: grayscale(100%); -webkit-filter: grayscale(100%) } 

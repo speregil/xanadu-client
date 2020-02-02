@@ -1,0 +1,16 @@
+<p class='title'>CONFIGURACIÓN</p>
+<div class='config-container'>
+    <div class='password'>
+        <p>Cambio de contraseña</p>
+        <div><label>Nueva clave</label><input type="password" [(ngModel)]="password"></div>
+        <div><label>Confirmación</label><input type="password" [(ngModel)]="confirmacion"></div>
+        <button (click)="changePassword()">Cambiar</button>
+        <p>{{msn}}</p>
+    </div>
+    <div class='avatar'>
+        <p>Cambio de Avatar</p>
+        <p>{{msn2}}</p>
+        <img src="assets/static/avatar/chica-ninguno.png" [ngClass] = "girlSelected" (click)="onClickAvatar('girl')">
+        <img src="assets/static/avatar/chico-ninguno.png" [ngClass] = "boySelected" (click)="onClickAvatar('boy')">
+    </div>
+</div>

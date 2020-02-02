@@ -1,0 +1,24 @@
+.warning { font-size: 60px; text-align: center; margin-top: 300px }
+
+.grid-container { display: grid; grid-gap: 10px; margin-left: 2%; margin-top: 10px; grid-template-columns: auto 20% 20% 33% }
+.grid-item { text-align: justify;  }
+.grid-item ul { list-style-type: none }
+
+.rol-container { font-size: x-large; text-align: justify; margin-right: 15px; background-image: url("../../assets/static/avatar/frame.png"); display: inline; position: relative }
+.rol-container img { width: 95%;margin-left: 6% }
+.rol-container p { padding-left: 6%; padding-right: 4% }
+
+.nav-container { display: grid; grid-template-columns: 50% 50%; margin-top: 10vh }
+
+.rol-button{ width: 32%; height: 130px; color: white; background-color: transparent }
+.rol-button:hover{ filter: grayscale(100%); color: cyan}
+.rol-button img { width: 100%; margin: auto }
+.rol-button p { text-align: center; margin: auto }
+
+.reto-button{ color: white; background-color: transparent; border: none; font-size: large }
+.reto-button:hover{ color: cyan }
+.reto-button:active{ color: black }
+
+.collection-container { margin-left: 2% }
+.collection-container p { font-size: x-large; padding-bottom: 1vh; cursor: pointer }
+.collection-container p:hover { color: cyan }

@@ -1,0 +1,19 @@
+.vidente-container { background-image: url("../../assets/static/oraculo/fondo-oraculo.jpg"); border: 1px solid black; height: 100vh;}
+.vidente-reto { text-align: center; font-size: x-large; margin-top: 2vh; padding: 2% 15% 2% 15%; background: url("../../assets/static/text-box.png"); background-size: 100% 100%; background-repeat: no-repeat; }
+
+.vidente-aceptar { margin-left: 65%; font-size: larger; color: white; border: 2px solid white; border-radius: 15px; background-color: transparent }
+.vidente-aceptar:hover{ color: cyan; border-color: cyan }
+.vidente-aceptar:active{ color: black; border-color: black }
+.vidente-aceptar-texto{ font-size: larger; margin-left: 3px }
+
+.vidente-oraculo { display: block; width: 25%; margin-top: 10px; margin-left: 38% }
+.vidente-oraculo:hover { cursor: pointer }
+
+.vidente-opciones { margin-top: 2vh; margin-left: 20% }
+.vidente-button { font-size: larger; color: white; border: 2px solid white; border-radius: 15px; background-color: transparent; margin-left: 5%; margin-right: 5% }
+.vidente-button:hover{ color: cyan; border-color: cyan }
+.vidente-button:active{ color: black; border-color: black }
+.vidente-button:disabled{ color: grey; border-color: grey }
+.selected { font-size: larger; color: cyan; border: 2px solid cyan; border-radius: 15px; background-color: transparent; margin-left: 5%; margin-right: 5% }
+.selected:hover{ color: white; border-color: white }
+.selected:active{ color: black; border-color: black }

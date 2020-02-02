@@ -1,0 +1,49 @@
+<div *ngIf="isLogged" class="grid-container">
+
+  <div class="rol-container grid-item">
+    <img src="assets/static/avatar/{{currentRol}}.png">
+    <p>{{currentText}}</p>
+  </div>
+  
+  <div class="grid-item nav-container">
+    <div>
+        <div (click) = "onContinue('animaciones-futurologo')" class="rol-button"><img src="assets/static/iconos/vidente.png"><p>Vidente</p></div>
+        <div (click) = "onContinue('animaciones-juglar')" class="rol-button"><img src="assets/static/iconos/juglar.png"><p>Juglar</p></div>
+        <div *ngIf="basico == true" (click) = "onContinue('taller')" class="rol-button"><img src="assets/static/iconos/taller.png"><p>Taller</p></div>
+    </div>
+
+    <div>
+        <div *ngIf="intermedio == true" (click) = "onContinue('animaciones-laboratorio')" class="rol-button"><img src="assets/static/iconos/laboratorio.png"><p>Laboratorio</p></div>
+        <div *ngIf="experto == true" (click) = "onContinue('animaciones-investigador')" class="rol-button"><img src="assets/static/iconos/reportero.png"><p>Reportero</p></div>
+        <div *ngIf="master == true" (click) = "onContinue('animaciones-interprete')" class="rol-button"><img src="assets/static/iconos/critico.png"><p>Crítico</p></div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h1>Tus Retos</h1>
+    <p>{{msnRetos}}</p>
+    <div>
+      <ul>
+        <li *ngFor="let r of retos"><button class="reto-button" (click) = "onChallenge(r.text)">{{r.type}}</button></li>
+      </ul>
+    </div>
+    <p>{{txtReto}}</p>
+  </div>
+
+  <div class="grid-item collection-container">
+    <h1>Tu Colección</h1>
+    <p (click)="onComic(1)">Comic - Capitulo 1</p>
+    <p (click)="onComic(2)" *ngIf="comic2 == true">Comic - Capitulo 2</p>
+    <p *ngIf="jar == true" (click) = "onDownload('assets/static/laboratorio/taller.pdf')">Obras JAR</p>
+    <p (click)="onComic(3)" *ngIf="comic3 == true">Comic - Capitulo 3</p>
+    <p *ngIf="cronica == true" (click) = "onDownload('assets/static/reportero/cronica.pdf')">Crónica</p>
+    <p *ngIf="novela == true" (click) = "onDownload('assets/static/novela.pdf')">Novela - Secretos en Xanadú</p>
+    <p *ngIf="ensayo == true" (click) = "onDownload('assets/static/critico/ensayo.pdf')">Ensayo</p>
+    <p *ngIf="final == true" (click) = "onDownload('assets/static/comic.zip')">Comic Completo</p>
+    <p *ngIf="final == true" (click) = "onDownload('assets/static/musica.zip')">Música</p>
+  </div>
+</div>
+
+<div *ngIf="isLogged == false" class="warning">
+  <p>Para continuar con la experiencia, es necesario que inicies sesión</p>
+</div>

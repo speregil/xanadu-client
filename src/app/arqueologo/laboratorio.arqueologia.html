@@ -1,0 +1,42 @@
+<div class='{{currentCursor}}'>
+    <div>
+        <table class='lab-tabla'>
+            <tr>
+                <td><img class='{{currentColors[0]}}' (click)='onImageClick(0)' src='assets/static/laboratorio/{{currentImages[0]}}.jpg'></td>
+                <td><img class='{{currentColors[1]}}' (click)='onImageClick(1)' src='assets/static/laboratorio/{{currentImages[1]}}.jpg'></td>
+                <td><img class='{{currentColors[2]}}' (click)='onImageClick(2)' src='assets/static/laboratorio/{{currentImages[2]}}.jpg'></td>
+            </tr>
+            <tr>
+                <td><img class='{{currentColors[3]}}' (click)='onImageClick(3)' src='assets/static/laboratorio/{{currentImages[3]}}.jpg'></td>
+                <td><img class='{{currentColors[4]}}' (click)='onImageClick(4)' src='assets/static/laboratorio/{{currentImages[4]}}.jpg'></td>
+                <td><img class='{{currentColors[5]}}' (click)='onImageClick(5)' src='assets/static/laboratorio/{{currentImages[5]}}.jpg'></td>
+            </tr>
+            <tr>
+                <td><img class='{{currentColors[6]}}' (click)='onImageClick(6)' src='assets/static/laboratorio/{{currentImages[6]}}.jpg'></td>
+                <td><img class='{{currentColors[7]}}' (click)='onImageClick(7)' src='assets/static/laboratorio/{{currentImages[7]}}.jpg'></td>
+                <td><img class='{{currentColors[8]}}' (click)='onImageClick(8)' src='assets/static/laboratorio/{{currentImages[8]}}.jpg'></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class='lab-resaltadores'>
+        <div></div>
+        <img src='assets/static/laboratorio/azul.png' (click)="onResaltador('A')">
+        <img src='assets/static/laboratorio/rojo.png' (click)="onResaltador('R')">
+        <img src='assets/static/laboratorio/verde.png' (click)="onResaltador('V')">
+        <div></div>
+    </div>
+    <div class='lab-resaltadores'>
+        <div></div>
+        <p>Gabriella Infinita</p>
+        <p>Memorias y Caminos</p>
+        <p>Golpe de Gracia</p>
+        <div></div>
+    </div>
+    <p>{{msn}}</p>
+    <div class='lab-opciones'>
+        <button class='main-button' (click)='validate()'>Verificar</button>
+        <button class='main-button' (click)='reset()'>Reiniciar</button>
+        <button class='main-button' (click)='onContinue()'>Volver</button>
+    </div>
+</div>

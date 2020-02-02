@@ -1,0 +1,89 @@
+<div class='cuestionario-container'>
+<p>Veamos a ver si entendimos que pasó con el caso de los Cyber Ancianos...</p>
+<div class='cuestionario'>
+    <div [ngClass] = "questionState[0]">
+        <label>Estos son los protagonistas del relato</label>
+        <select [(ngModel)]="selectedAnswers[0]">
+            <option value='a'>Felipe, Berta, Petry, JMartin</option>
+            <option value='b'>Cástor, Felipe, Berta, Alejo</option>    
+            <option value='c'>JMartin, Lula, Alejo, Cástor</option>    
+            <option value='d'>JMartin, Felipe, Berta, Cástor</option>        
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[1]">
+        <label>¿Quién narra los acontecimientos?</label>
+        <select [(ngModel)]="selectedAnswers[1]">
+            <option value='a'>Narrador anónimo</option>
+            <option value='b'>Felipe</option>    
+            <option value='c'>JMartin</option>    
+            <option value='d'>Lula</option>        
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[2]">
+        <label>¿Cuál es la persona del narrador?</label>
+        <select [(ngModel)]="selectedAnswers[2]">
+            <option value='a'>Primera persona</option>
+            <option value='b'>Segunda persona</option>    
+            <option value='c'>Tercera apersona</option>           
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[3]">
+        <label>¿Dónde ocurren los hechos?</label>
+        <select [(ngModel)]="selectedAnswers[3]">
+            <option value='a'>Bogotá del futuro</option>
+            <option value='b'>Ciudad anónima</option>    
+            <option value='c'>Otro planeta</option>           
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[4]">
+        <label>¿Cuándo ocurren los hechos?</label>
+        <select [(ngModel)]="selectedAnswers[4]">
+            <option value='a'>Aproximadamente en el año 2050</option>
+            <option value='b'>Aproximadamente en el año 2100</option>    
+            <option value='c'>Aproximadamente en el año 2075</option>
+            <option value='d'>Aproximadamente en el año 2085</option>             
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[5]">
+        <label>¿Qué es Xanadú?</label>
+        <select [(ngModel)]="selectedAnswers[5]">
+            <option value='a'>Un parque de diversiones</option>
+            <option value='b'>Una corporación tecnológica</option>    
+            <option value='c'>Un partido político</option>
+            <option value='d'>Una ciudad del futuro</option>             
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[6]">
+        <label>¿Cuál es el secreto de Xanadú?</label>
+        <select [(ngModel)]="selectedAnswers[6]">
+            <option value='a'>Un arma de destrucción masiva</option>
+            <option value='b'>Un tipo de gas letal</option>    
+            <option value='c'>La utilización de seres humanos como simuladores</option>
+            <option value='d'>Robots para la guerra</option>
+            <option value='e'>Taxis aéreos</option>                 
+        </select>
+    </div>
+    
+    <div [ngClass] = "questionState[7]">
+        <label>¿Cuál es la mayor habilidad de los protagonistas?</label>
+        <select [(ngModel)]="selectedAnswers[7]">
+            <option value='a'>Montar en bicicleta</option>
+            <option value='b'>Descubrir enigmas</option>    
+            <option value='c'>La inteligencia colectiva</option>
+            <option value='d'>Hablar con los animales</option>             
+        </select>
+    </div>
+</div>
+<p>{{msn}}</p>
+<div class='reportero-container'>
+    <button (click) = "verify()" class='main-button reportero-button'>Verificar</button>
+    <button (click) = "onReset()" class='main-button reportero-button'>Reiniciar</button>
+    <button (click) = "onContinue()" class='main-button reportero-button'>Continuar</button>
+</div>
+</div>
