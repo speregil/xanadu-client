@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ConfigurationService } from './configuration.service';
 
 /**
  * Servicio para recuperar los retos creados por los Master
@@ -11,13 +12,15 @@ export class ChallengesService {
     // Atributos
     //------------------------------------------------------------------------------------
 
-    host = 'localhost:3100';        // Host u puerto de escucha del servidor
+    host = '';      // Guarda localmente la dirección configurada del host del API
 
     //------------------------------------------------------------------------------------
     // Constructor
     //------------------------------------------------------------------------------------
 
-    constructor( private http: HttpClient ) {}
+    constructor( private http: HttpClient, private config: ConfigurationService ) {
+        this.host = config.serverhost;
+    }
 
     //------------------------------------------------------------------------------------
     // Servicios

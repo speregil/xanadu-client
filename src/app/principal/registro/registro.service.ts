@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ConfigurationService } from '../../models/configuration.service';
 
 /**
  * Servicio para el acceso al API del servidor
@@ -7,9 +8,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class RegistroService {
   
-    host = 'localhost:3100';
+    host = '';      // Guarda localmente la dirección configurada del host del API
 
-    constructor ( private http: HttpClient) {}
+    constructor ( private http: HttpClient, private config: ConfigurationService) {
+        this.host = config.serverhost;
+    }
 
     register(pUser : string, pPassword : string, pName : String){
         return this.http.post<{}>('http://' + this.host + '/register/', {user : pUser, password : pPassword, shownName : pName, admin: false});

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ConfigurationService } from './configuration.service';
 import { User } from './user.model';
 
 /**
@@ -17,13 +18,14 @@ export class UserService {
   private currentLastComic;       // Guarna la última página del comic actual
   private currentComicBg;         // Guarda la musica de fondo del lector actual del comic
  
-  host = 'localhost:3100';        // Host y puerto del servidor
+  host = '';                      // Guarda localmente la dirección configurada del host del API
 
   //------------------------------------------------------------------------
   // Constructor
   //------------------------------------------------------------------------
 
-  constructor( private http: HttpClient ) { 
+  constructor( private http: HttpClient, private config: ConfigurationService  ) { 
+    this.host = config.serverhost;
     if(localStorage.getItem('currentUser'))
       this.isUserLoggedIn = true;
     else

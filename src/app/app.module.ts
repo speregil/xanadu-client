@@ -36,6 +36,7 @@ import { MusicService } from './models/music.service';
 import { ChallengesService } from './models/challenges.service';
 import { DownloadService } from './models/downloads.service';
 import { RegistroService } from './principal/registro/registro.service';
+import { ConfigurationService } from './models/configuration.service';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { RegistroService } from './principal/registro/registro.service';
     MusicService,
     ChallengesService,
     DownloadService,
-	RegistroService
+    RegistroService,
+    ConfigurationService
   ],
   bootstrap: [AppComponent]
 })
