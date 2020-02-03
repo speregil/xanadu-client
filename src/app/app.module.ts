@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { PortadaComponent } from './principal/portada.component';
@@ -77,7 +78,8 @@ import { ConfigurationService } from './models/configuration.service';
     ChallengesService,
     DownloadService,
     RegistroService,
-    ConfigurationService
+    ConfigurationService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
