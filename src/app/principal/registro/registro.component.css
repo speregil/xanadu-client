@@ -14,3 +14,7 @@
 .avatar img:hover {opacity: 0.2; filter: alpha(opacity=20);}
 
 .selected { border:5px solid white }
+
+button{ font-size: x-large; color: white; border: 2px solid white; border-radius: 10px; background-color: transparent; margin-top: 15px; margin-left: 10% }
+button:hover{ color: cyan; border-color: cyan; }
+button:active{ color: black; border-color: black; }

@@ -69,9 +69,7 @@ export class ComicComponent {
   }
 
   changeBackground(dir){
-    console.log("pos: " + this.currentPos + " dir: " + dir);
     if(this.currentBg[this.currentPos] != this.currentBg[this.currentPos + dir]){
-      console.log("cambio");
       this.music.setBg('comic/' + this.currentBg[this.currentPos + dir]);
       this.app.notifyBgChange();
     }
@@ -211,6 +209,18 @@ export class ComicComponent {
    * Navega a la página pricipal
    */
   setRoute() {
-    this.router.navigate(["roles"]);
+    if(this.userService.isUserLogged()) {
+      var user = this.userService.getUserLoggedIn();
+      if(user.currentRol == 'Ninguno'){
+        this.router.navigate(["ajustes"]);
+      }
+      else{
+        this.router.navigate(["roles"]);
+      }
+    }
+    else{
+      console.log("Not Logged");
+      this.router.navigate(["roles"]);
+    }
   }
 }
