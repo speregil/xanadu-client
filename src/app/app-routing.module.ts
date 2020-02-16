@@ -10,7 +10,6 @@ import { ComicComponent } from './principal/comic/comic.component';
 import { LogrosComponent } from './principal/logros/logros.component';
 import { LaboratorioComponent } from './arqueologo/laboratorio.arqueologia';
 import { TallerComponent } from './arqueologo/taller.arqueologia';
-import { DeliberatoriumComponent } from './arqueologo/deliberatorium.arqueologia';
 import { JuglarComponent } from './juglar/juglar.component';
 import { MainFuturologoComponent } from './futurologo/mainFuturologo.component';
 import { InvestigadorComponent } from './investigador/investigador.component';
@@ -21,7 +20,6 @@ import { PrimeraAnimacionComponent } from './principal/animaciones/primera.compo
 import { IntroFuturologoComponent } from './principal/animaciones/introFuturologo.component';
 import { IntroJuglarComponent } from './principal/animaciones/introJuglar.component';
 import { IntroLaboratorioComponent } from './principal/animaciones/introLaboratorio.component';
-import { IntroDeliberatoriumComponent } from './principal/animaciones/introDeliberatorium.component';
 import { IntroInvestigadorComponent } from './principal/animaciones/introInvestigador.component';
 import { IntroInterpreteComponent } from './principal/animaciones/introInterprete.component';
 
@@ -39,14 +37,12 @@ const routes: Routes = [
   { path: 'juglar', component: JuglarComponent },
   { path: 'laboratorio', component: LaboratorioComponent },
   { path: 'taller', component: TallerComponent },
-  { path: 'deliberatorium', component: DeliberatoriumComponent },
   { path: 'investigador', component: InvestigadorComponent },
   { path: 'interprete', component: InterpreteComponent },
   { path: 'animaciones-primera', component: PrimeraAnimacionComponent },
   { path: 'animaciones-futurologo', component: IntroFuturologoComponent },
   { path: 'animaciones-juglar', component: IntroJuglarComponent },
   { path: 'animaciones-laboratorio', component: IntroLaboratorioComponent },
-  { path: 'animaciones-deliberatorium', component: IntroDeliberatoriumComponent  },
   { path: 'animaciones-investigador', component: IntroInvestigadorComponent  },
   { path: 'animaciones-interprete', component: IntroInterpreteComponent  }
 ];

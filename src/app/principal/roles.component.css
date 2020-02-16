@@ -1,3 +1,5 @@
+.titulo { font-size: 40px; text-align: center; margin-top: 20px }
+
 .warning { font-size: 60px; text-align: center; margin-top: 300px }
 
 .grid-container { display: grid; grid-gap: 10px; margin-left: 2%; margin-top: 10px; grid-template-columns: auto 20% 20% 33% }
