@@ -180,7 +180,7 @@ export class RolesComponent implements LoginObserver {
    */
   onDownload(url){
     this.download.downloadFile(url).subscribe(response => {
-      window.location.href = response.url;
+      window.open(response.url, "_blank");
 		}), error => console.log(error);
   }
 }

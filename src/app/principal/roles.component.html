@@ -39,10 +39,10 @@
     <p *ngIf="cronica == true" (click) = "onDownload('assets/static/reportero/cronica.pdf')">Crónica</p>
     <p *ngIf="novela == true" (click) = "onDownload('assets/static/novela.pdf')">Novela - Secretos en Xanadú</p>
     <p *ngIf="ensayo == true" (click) = "onDownload('assets/static/critico/ensayo.pdf')">Ensayo</p>
-    <p *ngIf="final == true" (click) = "onDownload('assets/static/comic.zip')">Comic Completo</p>
-    <p *ngIf="final == true" (click) = "onDownload('assets/static/musica.zip')">Música</p>
   </div>
 </div>
+
+<div *ngIf="final == true"><button (click) = "onContinue('magis')" class="main-button magis">Al Santuario</button></div>
 
 <div *ngIf="isLogged == false" class="warning">
   <p>Para continuar con la experiencia, es necesario que inicies sesión</p>

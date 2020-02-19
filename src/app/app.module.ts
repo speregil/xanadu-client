@@ -20,6 +20,7 @@ import { JuglarComponent } from './juglar/juglar.component';
 import { MainFuturologoComponent } from './futurologo/mainFuturologo.component';
 import { InvestigadorComponent } from './investigador/investigador.component';
 import { InterpreteComponent } from './interprete/interprete.component';
+import { MagisComponent } from './principal/magis.component';
 
 import { AppRoutingModule } from './/app-routing.module';
 
@@ -63,7 +64,8 @@ import { ConfigurationService } from './models/configuration.service';
     IntroDeliberatoriumComponent,
     IntroJuglarComponent,
     IntroInvestigadorComponent,
-    IntroInterpreteComponent
+    IntroInterpreteComponent,
+    MagisComponent
   ],
   imports: [
     BrowserModule,

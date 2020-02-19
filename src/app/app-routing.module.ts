@@ -15,6 +15,7 @@ import { MainFuturologoComponent } from './futurologo/mainFuturologo.component';
 import { InvestigadorComponent } from './investigador/investigador.component';
 import { InterpreteComponent } from './interprete/interprete.component';
 import { AppComponent } from './app.component';
+import { MagisComponent } from './principal/magis.component';
 
 import { PrimeraAnimacionComponent } from './principal/animaciones/primera.component';
 import { IntroFuturologoComponent } from './principal/animaciones/introFuturologo.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'ajustes', component: AjustesComponent },
   { path: 'interficies', component: AppComponent },
   { path: 'roles', component: RolesComponent },
+  { path: 'magis', component: MagisComponent },
   { path: 'creditos', component: CreditosComponent },
   { path: 'instrucciones', component: InstruccionesComponent },
   { path: 'comic', component: ComicComponent },

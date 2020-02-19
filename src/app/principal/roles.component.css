@@ -24,3 +24,5 @@
 .collection-container { margin-left: 2% }
 .collection-container p { font-size: x-large; padding-bottom: 1vh; cursor: pointer }
 .collection-container p:hover { color: cyan }
+
+.magis { margin-top: 10px; margin-left: 50%; font-size: 40px;}
