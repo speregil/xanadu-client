@@ -161,13 +161,13 @@ export class RolesComponent implements LoginObserver {
         break;
       case 2:
         this.userService.setInitComic("16");
-        this.userService.setLastComic("21");
+        this.userService.setLastComic("28");
         this.userService.setComicBg(2);
         this.router.navigate(['comic']);
         break;
       case 3:
         this.userService.setInitComic("29");
-        this.userService.setLastComic("43");
+        this.userService.setLastComic("45");
         this.userService.setComicBg(3);
         this.router.navigate(['comic']);
         break;  

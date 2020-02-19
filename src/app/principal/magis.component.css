@@ -1,7 +1,7 @@
 h1 { font-size: 40px; text-align: center; margin-top: 20px }
 p { font-size: xx-large; text-align: center; margin-top: 15px }
 
-.grid-container { display: grid; grid-gap: 10px; grid-template-columns: auto auto auto }
+.grid-container { display: grid; grid-gap: 10px; grid-template-columns: auto auto auto auto}
 .grid-item { text-align: center;  }
 
 .opciones { color: white; margin-top: 10px }
