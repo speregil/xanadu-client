@@ -84,12 +84,12 @@ export class TallerComponent {
    * Reporta el estado del procedimiento en el campo msn
    */
   onDownload(){
-    var url = './assets/static/laboratorio/taller.pdf';
+    var url = 'assets/static/laboratorio/taller.pdf';
     this.msn = "Reto Aceptado"
     this.basicAble = false;
     this.cargando = false;
     this.download.downloadFile(url).subscribe(response => {
-      window.location.href = response.url;
+      window.open(response.url, "_blank");
 		}), error => this.msn = error
   }
 

@@ -128,11 +128,11 @@ export class ComicComponent {
         this.setAchivement(1);
         break;
       }
-      case '17' : {
+      case '16' : {
         this.setAchivement(2);
         break;
       }
-      case '30' : {
+      case '29' : {
         this.setAchivement(3);
         break;
       }

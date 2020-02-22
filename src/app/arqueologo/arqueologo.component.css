@@ -24,4 +24,6 @@
 .taller-button a:visited { color: white; text-decoration: none }
 .taller-button a:hover { color: cyan; text-decoration: none }
 
-.video { width: 90%; height: 75vh; margin-left: 5% }
+.intro-container { display: grid; grid-template-columns: 25% auto; margin-top: 3vh;}
+p { font-size: 28px; text-align: justify; padding-left: 70px; }
+.video { height: 75vh; margin-left: 5%; }

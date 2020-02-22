@@ -137,7 +137,7 @@ export class InvestigadorComponent {
     this.basicAble = false;
     this.cargando = false;
     this.download.downloadFile(url).subscribe(response => {
-      window.location.href = response.url;
+      window.open(response.url, "_blank");
 		}), error => this.msn = error
   }
 }
