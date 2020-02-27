@@ -136,8 +136,6 @@ export class InvestigadorComponent {
     this.msn = "Nuevo Reto Agregado";
     this.basicAble = false;
     this.cargando = false;
-    this.download.downloadFile(url).subscribe(response => {
-      window.open(response.url, "_blank");
-		}), error => this.msn = error
+    window.open(url, "_blank");
   }
 }

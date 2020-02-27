@@ -5,8 +5,8 @@
 <div class="opciones grid-container">
     <button (click) = "onDownload('assets/static/comic.zip')" class="grid-item">Comic</button>
     <button (click) = "onDownload('assets/static/musica.zip')" class="grid-item">Música</button>
-    <button (click) = "onDownload('assets/static/novela.pdf')" class="grid-item">Novela</button>
-    <a href ='https://www.youtube.com/watch?v=3VKy6gzxSlU' target="_blank"><button class="grid-item">Angeles</button></a>
+    <button (click) = "onPDFViewer('assets/static/novela.pdf')" class="grid-item">Novela</button>
+    <button (click) = "onPDFViewer('https://www.youtube.com/watch?v=3VKy6gzxSlU')" class="grid-item">Angeles</button>
 </div>
 
 <button (click) = "onContinue('roles')" class="main-button">Al Escritorio</button>

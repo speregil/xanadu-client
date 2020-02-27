@@ -181,6 +181,10 @@ export class RolesComponent implements LoginObserver {
   onDownload(url){
     this.download.downloadFile(url).subscribe(response => {
       window.open(response.url, "_blank");
-		}), error => console.log(error);
+    }), error => console.log(error);
+  }
+
+  onPDFViewer(url){
+    window.open(url, "_blank");
   }
 }

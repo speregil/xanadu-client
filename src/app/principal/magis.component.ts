@@ -32,6 +32,10 @@ export class MagisComponent {
         }), error => console.log(error);
     }
 
+    onPDFViewer(url){
+      window.open(url, "_blank");
+    }
+
     onContinue( route ) {
         this.router.navigate([route]);
     }

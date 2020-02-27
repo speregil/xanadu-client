@@ -1,10 +1,11 @@
 h1 { font-size: 40px; text-align: center; margin-top: 20px }
 p { font-size: xx-large; text-align: center; margin-top: 15px }
 
-.grid-container { display: grid; grid-gap: 10px; grid-template-columns: auto auto auto auto}
-.grid-item { text-align: center;  }
+.grid-container { display: grid; grid-gap: 5px; grid-template-columns: auto auto auto auto}
+.grid-item { text-align: center; }
 
 .opciones { color: white; margin-top: 10px }
 .opciones button { width: 32%; height: 130px; background-color: transparent; font-size: 40px; color: white }
+.opciones button:hover { color: cyan; border-color: cyan; }
 
 button { margin-top: 150px; margin-left: 45%; font-size: 40px;}

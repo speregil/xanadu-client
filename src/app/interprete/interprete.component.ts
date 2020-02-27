@@ -140,8 +140,6 @@ export class InterpreteComponent {
     this.msn = "Tienes un nuevo reto";
     this.basicAble = false;
     this.cargando = false;
-    this.download.downloadFile(url).subscribe(response => {
-      window.open(response.url, "_blank");
-		}), error => this.msn = error
+    window.open(url, "_blank");
   }
 }
