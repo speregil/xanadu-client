@@ -28,14 +28,14 @@ export class ComicComponent {
   currentPos = 0;                 // Posicion del track actual en la secuencia
 
   // Lista de fondos para los diferentes capítulos
-  chapter1BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
-                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
+  chapter1BG = ["comic-1.mp3", "comic-1.mp3", "comic-1.mp3", "comic-1.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
+                "comic-2.mp3", "comic-2.mp3", "comic-2.mp3", "comic-2.mp3", "comic-2.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3"];
 
-  chapter2BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
-                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
+  chapter2BG = ["comic-4.mp3", "comic-4.mp3", "comic-4.mp3", "comic-4.mp3", "comic-5.mp3", "comic-5.mp3", "comic-5.mp3",
+                "comic-6.mp3", "comic-6.mp3", "comic-6.mp3", "comic-7.mp3", "comic-7.mp3", "comic-7.mp3"];
 
-  chapter3BG = ["comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-2.mp3", "comic-2.mp3",
-                "comic-2.mp3", "comic-1.mp3", "comic-1.mp3", "comic-3.mp3", "comic-3.mp3", "comic-3.mp3", "comic-1.mp3", "comic-3.mp3"];
+  chapter3BG = ["comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3",
+                "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3", "comic-8.mp3"];
 
   //----------------------------------------------------------------------------------------------------------
   // Constructor
@@ -45,7 +45,7 @@ export class ComicComponent {
     this.initComic = this.userService.getInitComic();
     this.lastComic = this.userService.getLastComic();
     this.currentComic = this.initComic;
-    this.setBackground(this.userService.getComicBg())
+    this.setBackground(this.userService.getComicBg());
   }
 
   //----------------------------------------------------------------------------------------------------------

@@ -48,20 +48,44 @@ export class RolesComponent implements LoginObserver {
   txtReto = "";                 // Atributo que guarda el texto descriptivo del reto actual seleccionado
   retos = [];                   // Atributo que guarda la lista de retos del usuario en sesión
 
-  bgSound = null;               // Atributo que controla la música de fondo
+  bgSound = "";                 // Atributo que controla la música de fondo
+
+  bgOptions = ["menu-1.mp3", "menu-2.mp3", "menu-3.mp3", "menu-4.mp3", "menu-5.mp3"];   // Lista de opciones de musica de fondo para el menu principal
 
   //----------------------------------------------------------------------------------------------------------
   // Constructor
   //----------------------------------------------------------------------------------------------------------
 
-  constructor(private userService: UserService, private principal: AppComponent, private router: Router, private http: HttpClient, private download: DownloadService, music: MusicService) {
+  constructor(private userService: UserService, private principal: AppComponent, private router: Router, private http: HttpClient, private download: DownloadService, private music: MusicService) {
     this.isLogged = this.userService.isUserLogged();
     this.principal.addLoginObserver(this);
-    music.setBg('snd_portada.mp3');
-    principal.notifyBgChange();
     this.showRoleProgress();
     this.getCurrentRol();
     this.getChallenges();
+    this.setBackground();
+  }
+
+  /**
+   * Asigna la pista correcta de musica de fondo dependiendo del progreso del usuario
+   */
+  setBackground(){
+    if(this.isLogged){
+      var user = this.userService.getUserLoggedIn();
+      var currentlevel = user.level;
+      if(currentlevel == "Iniciado")
+        this.bgSound = this.bgOptions[0];
+      else if(currentlevel == "Practicante 1")
+        this.bgSound = this.bgOptions[1];
+      else if(currentlevel == "Practicante 2")
+        this.bgSound = this.bgOptions[2];
+      else if(currentlevel == "Experto")
+        this.bgSound = this.bgOptions[3];
+      else if(currentlevel == "Magis")
+        this.bgSound = this.bgOptions[4];
+    }
+
+    this.music.setBg('menu/' + this.bgSound);
+    this.principal.notifyBgChange();
   }
 
   //----------------------------------------------------------------------------------------------------------
@@ -184,7 +208,28 @@ export class RolesComponent implements LoginObserver {
     }), error => console.log(error);
   }
 
-  onPDFViewer(url){
+  onPDFViewer(url, id){
+    if(id == 'novela'){
+      var text = "Has leído la novela";
+      var puntos = 20;
+      var user = this.userService.getUserLoggedIn()
+      if(this.userService.checkUserAchivements(user, text)){
+        this.userService.setAchivement(user.username, text, puntos).subscribe(response => {
+          if(response['status'] > 0)
+            alert(response['mensaje']);
+          else {
+            alert("Logro obtenido: " + text);
+            this.userService.localUpdateAchivemets(user, text, puntos);
+            this.userService.checkLevel(user, updated => {
+              if(updated){
+                alert("Aumentaste de nivel");
+                this.principal.updateLogin();
+              }
+            });
+          }
+        });
+      }
+    }
     window.open(url, "_blank");
   }
 }

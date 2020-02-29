@@ -188,16 +188,16 @@ export class UserService {
     for(var achivement of achivements) {
       puntos += Number.parseInt(achivement["points"]);
     }
-    if(puntos >= 20 && puntos < 50 ){
+    if(puntos >= 50 && puntos < 100 ){
       this.updateLevel(user, 'Practicante 1', function(updated){ callback(updated)});
     }
-    else if(puntos >= 50 && puntos < 130){
+    else if(puntos >= 100 && puntos < 150){
       this.updateLevel(user, 'Practicante 2', function(updated){ callback(updated)});
     }
-    else if(puntos >= 130 && puntos < 180){
+    else if(puntos >= 150 && puntos < 200){
       this.updateLevel(user, 'Experto', function(updated){ callback(updated)});
     }
-    else if (puntos >= 180){
+    else if (puntos >= 200){
       this.updateLevel(user, 'Magis', function(updated){ callback(updated)});
     }
   }

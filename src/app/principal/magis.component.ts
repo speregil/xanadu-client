@@ -22,7 +22,7 @@ export class MagisComponent {
     //---------------------------------------------------------------------------------------------
 
     constructor(private userService: UserService, private principal: AppComponent, private router: Router, private http: HttpClient, private download: DownloadService, music: MusicService) {
-        music.setBg('snd_portada.mp3');
+        music.setBg('menu/menu-6.mp3');
         principal.notifyBgChange();
     }
 

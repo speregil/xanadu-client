@@ -36,9 +36,9 @@
     <p (click)="onComic(2)" *ngIf="comic2 == true">Comic - Capitulo 2</p>
     <p *ngIf="jar == true" (click) = "onPDFViewer('assets/static/laboratorio/taller.pdf')">Obras JAR</p>
     <p (click)="onComic(3)" *ngIf="comic3 == true">Comic - Capitulo 3</p>
-    <p *ngIf="cronica == true" (click) = "onPDFViewer('assets/static/reportero/cronica.pdf')">Crónica</p>
-    <p *ngIf="novela == true" (click) = "onPDFViewer('assets/static/novela.pdf')">Novela - Secretos en Xanadú</p>
-    <p *ngIf="ensayo == true" (click) = "onPDFViewer('assets/static/critico/ensayo.pdf')">Ensayo</p>
+    <p *ngIf="cronica == true" (click) = "onPDFViewer('assets/static/reportero/cronica.pdf', 'cronica')">Crónica</p>
+    <p *ngIf="novela == true" (click) = "onPDFViewer('assets/static/novela.pdf', 'novela')">Novela - Secretos en Xanadú</p>
+    <p *ngIf="ensayo == true" (click) = "onPDFViewer('assets/static/critico/ensayo.pdf', 'ensayo')">Ensayo</p>
   </div>
 </div>
 
