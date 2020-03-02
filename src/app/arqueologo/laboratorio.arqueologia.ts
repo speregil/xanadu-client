@@ -148,6 +148,10 @@ export class LaboratorioComponent {
         this.msn = "Espera un momento por favor...";
         this.cargando = true;
         this.saveAchivement();
+        this.userService.setInitComic("29");
+        this.userService.setLastComic("45");
+        this.userService.setComicBg(3);
+        this.router.navigate(["comic"]);
       }
     }
     else{

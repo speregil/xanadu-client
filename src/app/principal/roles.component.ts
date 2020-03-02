@@ -132,7 +132,7 @@ export class RolesComponent implements LoginObserver {
           this.master =  progress["periodista"];
           this.novela =  progress["periodista"];
           this.ensayo =  progress["criticoAsig"];
-          this.final = progress["critico"];
+          this.final = progress["final"];
         }
       });
     }

@@ -188,6 +188,7 @@ export class UserService {
     for(var achivement of achivements) {
       puntos += Number.parseInt(achivement["points"]);
     }
+
     if(puntos >= 50 && puntos < 100 ){
       this.updateLevel(user, 'Practicante 1', function(updated){ callback(updated)});
     }
@@ -227,17 +228,23 @@ export class UserService {
    * @param callback Función de retorno
    */
   updateLevel(user, plevel, callback){
-    user.level = plevel;
-    this.http.post<{}>('http://' + this.host + '/progress/level', {username : user.username, level : plevel}).subscribe(response =>{
-      if(response['mensaje']){
-        callback(false);
-      }
-      else{
-        localStorage.removeItem('currentUser');
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        callback(true);
-      }
-    });
+    if(user.level != plevel){
+      user.level = plevel;
+      this.http.post<{}>('http://' + this.host + '/progress/level', {username : user.username, level : plevel}).subscribe(response =>{
+        if(response['mensaje']){
+          callback(false);
+        }
+        else{
+          localStorage.removeItem('currentUser');
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          if(plevel == "Magis"){
+            this.saveProgress(user.username, "final").subscribe(response => {
+              callback(true);
+            });
+          }
+        }
+      });
+    }
   }
 
   /**
