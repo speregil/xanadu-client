@@ -1,4 +1,4 @@
-.titulo { font-size: 40px; text-align: center; margin-top: 20px }
+.titulo { font-size: 40px; margin-left: 45%; margin-top: 20px }
 
 .warning { font-size: 60px; text-align: center; margin-top: 300px }
 
@@ -25,4 +25,4 @@
 .collection-container p { font-size: x-large; padding-bottom: 1vh; cursor: pointer }
 .collection-container p:hover { color: cyan }
 
-.magis { margin-top: 10px; margin-left: 50%; font-size: 40px;}
+.magis { margin-left: 30%; font-size: 20px; }

@@ -134,6 +134,11 @@ export class JuglarComponent {
             this.masterAble = false;
             this.acceptAble = false;
             this.cargando = false;
+
+            this.userService.setInitComic("16");
+            this.userService.setLastComic("28");
+            this.userService.setComicBg(2);
+            this.router.navigate(['comic']);
           });
         }
       });

@@ -73,6 +73,9 @@ export class InvestigadorComponent {
       else
         this.msn = "Hay respuestas incorrectas";
     }
+    else{
+      alert("Ya completaste este desafio");
+    }
   }
 
   /**
@@ -117,7 +120,10 @@ export class InvestigadorComponent {
    * Navega al menu principal
    */
   onContinue() {
-    this.router.navigate(["roles"]); 
+    this.userService.setInitComic("29");
+    this.userService.setLastComic("45");
+    this.userService.setComicBg(3);
+    this.router.navigate(['comic']);
   }
 
   /**
