@@ -12,12 +12,12 @@
 
 .nav-container { display: grid; grid-template-columns: 50% 50%; margin-top: 10vh }
 
-.rol-button{ width: 32%; height: 130px; color: white; background-color: transparent }
+.rol-button{ width: 32%; height: 130px; color: white; background-color: transparent; cursor: pointer; }
 .rol-button:hover{ filter: grayscale(100%); color: cyan}
 .rol-button img { width: 100%; margin: auto }
 .rol-button p { text-align: center; margin: auto }
 
-.reto-button{ color: white; background-color: transparent; border: none; font-size: large }
+.reto-button{ color: white; background-color: transparent; border: none; font-size: large; cursor: pointer; }
 .reto-button:hover{ color: cyan }
 .reto-button:active{ color: black }
 

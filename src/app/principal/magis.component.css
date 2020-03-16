@@ -4,8 +4,8 @@ p { font-size: xx-large; text-align: center; margin-top: 15px }
 .grid-container { display: grid; grid-gap: 5px; grid-template-columns: auto auto auto auto}
 .grid-item { text-align: center; }
 
-.opciones { color: white; margin-top: 10px }
-.opciones button { width: 32%; height: 130px; background-color: transparent; font-size: 40px; color: white }
-.opciones button:hover { color: cyan; border-color: cyan; }
+.opciones { color: white; margin-top: 25vh; margin-left: 10%; }
+.opciones p { width: 32%; height: 130px; background-color: transparent; font-size: 40px; color: white; cursor: pointer; }
+.opciones p:hover { color: cyan; border-color: cyan; }
 
 button { margin-top: 150px; margin-left: 45%; font-size: 40px;}
