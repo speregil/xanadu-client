@@ -113,6 +113,7 @@ export class JuglarComponent {
     var i = Math.floor(Math.random() * this.masterChallenges.length);
     var challenge = this.masterChallenges[i];
     this.retoActual = challenge.text;
+    this.perfilActual = " ";
     this.acceptAble = true;
   }
 
@@ -142,6 +143,23 @@ export class JuglarComponent {
           });
         }
       });
+    }
+  }
+
+  /**
+   * Cambia el pool del retos a elegir por aquel que entra por parametro
+   * @param nPool Nuevo pool a elegir basico o master
+   */
+  changePool(nPool){
+    if(nPool == 'basico'){
+      this.poolBasico = "selected";
+      this.poolMaster = "juglar-button";
+      this.basico = true;
+    }
+    else {
+      this.poolBasico = "juglar-button";
+      this.poolMaster = "selected";
+      this.basico = false;
     }
   }
 

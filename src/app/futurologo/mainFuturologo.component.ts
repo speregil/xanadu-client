@@ -53,7 +53,7 @@ export class MainFuturologoComponent {
         }
         else{
           this.challenges.getMasterChallenges('oraculo').subscribe(response => {
-            if(response['mensaje'] == null){
+            if(response['mensaje'] == null && response['list'].length > 0){
               this.masterChallenges = response['list'];
               this.masterAble = true;
             }
