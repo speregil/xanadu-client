@@ -8,7 +8,41 @@
         <p class="opcion" (click) = "onDownload('assets/static/musica.zip')" class="grid-item">Música</p>
         <p class="opcion" (click) = "onPDFViewer('assets/static/novela-bonus.pdf')" class="grid-item">Novela</p>
         <p class="opcion" (click) = "onPDFViewer('https://www.youtube.com/watch?v=3VKy6gzxSlU')" class="grid-item">Angeles</p>
+        <p class="opcion" (click) = "onCrear()" class="grid-item">Crear</p>
     </div>
 
-    <button (click) = "onContinue('roles')" class="main-button">Al Escritorio</button>
+    <div *ngIf="creando" class="crear">
+        <div>
+            <div>
+                <label>Tipo de reto</label>
+                <select class="main-select" [(ngModel)] = "tipoSeleccionado">
+                    <option [value]="'oraculo'">Oráculo</option>
+                    <option [value]="'juglar'">Juglar</option>
+                </select>
+            </div>
+            <div>
+                <label>Descripción</label>
+                <textarea [(ngModel)] = "descripcion"></textarea>
+                <p>{{msn}}</p>
+            </div>
+            <div>
+                <button class='main-button' (click) = "onAccept()">Agregar</button>
+                <button class='main-button' (click) = "onLimpiar()">Limpiar</button>
+                <button class='main-button' (click) = "onCrear()">Cerrar</button>
+            </div>
+        </div>
+        <div>
+            <h1>Mis retos creados</h1>
+            <ul>
+                <li *ngFor="let r of listaRetos">
+                    <div class="reto">
+                        <span class="tipo">Tipo: {{r.type}}</span>  
+                    </div>
+                    <p class="descripcion">{{r.text}}</p>
+                </li>    
+            </ul>
+        </div>
+    </div>
+
+    <button (click) = "onContinue('roles')" class="main-button escritorio">Al Escritorio</button>
 </div>

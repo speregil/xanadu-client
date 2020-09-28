@@ -2,11 +2,21 @@ h1 { font-size: 40px; text-align: center; margin-top: 20px }
 p { font-size: xx-large; text-align: center; margin-top: 15px }
 
 .magis { background-image: url("../../assets/static/magis.jpg"); height: 100vh; margin-top: -1%;}
-.grid-container { display: grid; grid-gap: 5px; grid-template-columns: auto auto auto auto}
+.grid-container { display: grid; grid-gap: 5px; grid-template-columns: auto auto auto auto auto}
 .grid-item { text-align: center; }
 
 .opciones { color: white; margin-top: 22vh; margin-left: 10%; }
 .opciones p { width: 32%; height: 130px; background-color: transparent; font-size: 40px; color: white; cursor: pointer; }
 .opciones p:hover { color: cyan; border-color: cyan; }
 
-button { margin-left: 40%; font-size: 40px;}
+.crear { background-color: rgba(50, 50, 175, 0.75); width: 60%; margin-left: 20%; display: grid; grid-gap: 2px; grid-template-columns: auto auto }
+.crear p { margin-top:30px; font-size: xx-large; }
+.crear div { margin-left: 5%; }
+.crear button { font-size: 20px; margin-right: 2%; margin-bottom: 30px; }
+.crear li { font-size: small; }
+.tipo { font-size: xx-large; margin: 0 1% 0 0 }
+.escritorio { margin-left: 40%; margin-top: 20px; font-size: 40px;}
+
+textarea { display: block; margin: 1% 0 1% 0; width: 35%; height: 15vh; }
+label { font-size: x-large; margin: 0 2% 0 0 }
+select { display: block; width: 35%; margin: 1% 0 1% 0 }
