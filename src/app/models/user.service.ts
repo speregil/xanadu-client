@@ -238,7 +238,7 @@ export class UserService {
           localStorage.removeItem('currentUser');
           localStorage.setItem('currentUser', JSON.stringify(user));
           if(plevel == "Magis"){
-            this.saveProgress(user.username, "final").subscribe(response => {
+            this.saveProgress(user.username, "magis").subscribe(response => {
               callback(true);
             });
           }
